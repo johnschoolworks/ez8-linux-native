@@ -1,0 +1,13 @@
+"""Z8F0822 memory layout derived from the committed Zilog golden linker map."""
+ROM_START, ROM_END = 0x0000, 0x1FFF
+HEADER_END = 0x0037
+STARTUP_ADDRESS = 0x0038
+RESET_VECTOR_ADDRESS = 0x0002
+HEADER_SIZE = STARTUP_ADDRESS
+RANGES = {
+    'ROM': (STARTUP_ADDRESS, ROM_END),
+    'RDATA': (0x0020, 0x00DF),
+    'EDATA': (0x0100, 0x03FF),
+    'PRAM': (0x0000, 0x000F),
+    'PAGE_E': (0x0E00, 0x0EFF),
+}

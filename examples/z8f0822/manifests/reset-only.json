@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "device": "Z8F0822",
+  "status": "experimental",
+  "vectors": [
+    {
+      "address": "0x0002",
+      "symbol": "m0:RESET",
+      "kind": "reset"
+    }
+  ]
+}

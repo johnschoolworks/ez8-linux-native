@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pypytest_cache/
+.venv/
+
+# Build artifacts
+build/
+/backups/
+*.log
+
+# Editor and OS files
+.DS_Store
+*~
+
+# Proprietary toolchain reference artifacts
+tests/golden/artifacts/
+tests/golden/expected/*.lst
+*.obj
+*.lst
+
+# Python distribution artifacts
+*.egg-info/
+dist/

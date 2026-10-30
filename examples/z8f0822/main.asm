@@ -1,0 +1,4 @@
+.global MAIN
+
+MAIN:
+    RET

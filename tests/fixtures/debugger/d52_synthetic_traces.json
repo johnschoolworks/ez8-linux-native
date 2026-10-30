@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "evidence": "SYNTHETIC",
+  "hardware_verified": false,
+  "cases": [
+    {
+      "id": "identify_success",
+      "events": [
+        {
+          "kind": "tx",
+          "value": "80"
+        },
+        {
+          "kind": "rx",
+          "value": "010203558811"
+        },
+        {
+          "kind": "tx",
+          "value": "000014"
+        },
+        {
+          "kind": "baud",
+          "value": 57600
+        }
+      ],
+      "outcome": "success"
+    },
+    {
+      "id": "identify_timeout",
+      "events": [
+        {
+          "kind": "tx",
+          "value": "80"
+        },
+        {
+          "kind": "timeout",
+          "value": 6
+        }
+      ],
+      "outcome": "timeout"
+    },
+    {
+      "id": "identify_short_read",
+      "events": [
+        {
+          "kind": "tx",
+          "value": "80"
+        },
+        {
+          "kind": "short_read",
+          "value": 3
+        }
+      ],
+      "outcome": "short_read"
+    },
+    {
+      "id": "identify_bad_signature",
+      "events": [
+        {
+          "kind": "tx",
+          "value": "80"
+        },
+        {
+          "kind": "rx",
+          "value": "000000000000"
+        }
+      ],
+      "outcome": "protocol_error"
+    }
+  ]
+}

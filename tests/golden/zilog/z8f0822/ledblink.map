@@ -1,0 +1,248 @@
+
+IEEE 695 OMF Linker Version 6.31 (24082004)
+Copyright (C) 1999-2008 Zilog, Inc. All Rights Reserved
+
+LINK MAP:
+
+DATE:      Wed Oct 28 22:58:58 2026
+PROCESSOR: assembler
+FILES:     ledblink.obj           
+
+
+COMMAND LIST:
+=============
+/* Z8F0822 Linker Reference */
+/* Derived from Zilog ZDS II linker command syntax */
+
+-FORMAT=INTEL
+
+RANGE ROM $0000 : $1FFF
+RANGE RDATA $0020 : $00DF
+RANGE EDATA $0100 : $03FF
+RANGE PRAM $0000 : $000F
+RANGE PAGE_E $0E00 : $0EFF
+
+"ledblink_verified.hex" = "ledblink.obj"
+
+SPACE ALLOCATION:
+=================
+
+Space                     Base         Top      Size      Used    Unused
+------------------ ----------- ----------- --------- --------- ---------
+RDATA                     R:20        R:23       C0H        4H       BCH
+                                          (      192         4       188)
+ROM                     C:0000      C:022B     2000H      22AH     1DD6H
+                                          (     8192       554      7638)
+
+
+SEGMENTS WITHIN SPACE:
+======================
+
+RDATA                             Type        Base         Top      Size
+------------------ ------------------- ----------- ----------- ---------
+NEAR_DATA          normal data                R:20        R:23        4h
+
+
+ROM                               Type        Base         Top      Size
+------------------ ------------------- ----------- ----------- ---------
+___flash_option1_s absolute data            C:0000      C:0000        1h
+___flash_option2_s absolute data            C:0001      C:0001        1h
+__VECTORS_002      absolute data            C:0002      C:0003        2h
+__VECTORS_006      absolute data            C:0006      C:0007        2h
+__VECTORS_008      absolute data            C:0008      C:0009        2h
+__VECTORS_00A      absolute data            C:000A      C:000B        2h
+__VECTORS_00C      absolute data            C:000C      C:000D        2h
+__VECTORS_00E      absolute data            C:000E      C:000F        2h
+__VECTORS_010      absolute data            C:0010      C:0011        2h
+__VECTORS_012      absolute data            C:0012      C:0013        2h
+__VECTORS_014      absolute data            C:0014      C:0015        2h
+__VECTORS_016      absolute data            C:0016      C:0017        2h
+__VECTORS_018      absolute data            C:0018      C:0019        2h
+__VECTORS_01A      absolute data            C:001A      C:001B        2h
+__VECTORS_01C      absolute data            C:001C      C:001D        2h
+__VECTORS_01E      absolute data            C:001E      C:001F        2h
+__VECTORS_020      absolute data            C:0020      C:0021        2h
+__VECTORS_022      absolute data            C:0022      C:0023        2h
+__VECTORS_024      absolute data            C:0024      C:0025        2h
+__VECTORS_026      absolute data            C:0026      C:0027        2h
+__VECTORS_028_030  absolute data            C:0028      C:002F        8h
+__VECTORS_030      absolute data            C:0030      C:0031        2h
+__VECTORS_032      absolute data            C:0032      C:0033        2h
+__VECTORS_034      absolute data            C:0034      C:0035        2h
+__VECTORS_036      absolute data            C:0036      C:0037        2h
+CODE               normal data              C:0048      C:01E2      19bh
+ROM_TEXT           normal data              C:01E3      C:022B       49h
+STARTUP            normal data              C:0038      C:0047       10h
+
+SEGMENTS WITHIN MODULES:
+========================
+
+Module: Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm (File: ledblink.obj) Version: 1:0 10/28/2026 22:51:25
+
+    Name                                           Base         Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: ___flash_option1_segment            C:0000      C:0000        1h
+    Segment: ___flash_option2_segment            C:0001      C:0001        1h
+    Segment: __VECTORS_002                       C:0002      C:0003        2h
+    Segment: __VECTORS_006                       C:0006      C:0007        2h
+    Segment: __VECTORS_008                       C:0008      C:0009        2h
+    Segment: __VECTORS_00A                       C:000A      C:000B        2h
+    Segment: __VECTORS_00C                       C:000C      C:000D        2h
+    Segment: __VECTORS_00E                       C:000E      C:000F        2h
+    Segment: __VECTORS_010                       C:0010      C:0011        2h
+    Segment: __VECTORS_012                       C:0012      C:0013        2h
+    Segment: __VECTORS_014                       C:0014      C:0015        2h
+    Segment: __VECTORS_016                       C:0016      C:0017        2h
+    Segment: __VECTORS_018                       C:0018      C:0019        2h
+    Segment: __VECTORS_01A                       C:001A      C:001B        2h
+    Segment: __VECTORS_01C                       C:001C      C:001D        2h
+    Segment: __VECTORS_01E                       C:001E      C:001F        2h
+    Segment: __VECTORS_020                       C:0020      C:0021        2h
+    Segment: __VECTORS_022                       C:0022      C:0023        2h
+    Segment: __VECTORS_024                       C:0024      C:0025        2h
+    Segment: __VECTORS_026                       C:0026      C:0027        2h
+    Segment: __VECTORS_028_030                   C:0028      C:002F        8h
+    Segment: __VECTORS_030                       C:0030      C:0031        2h
+    Segment: __VECTORS_032                       C:0032      C:0033        2h
+    Segment: __VECTORS_034                       C:0034      C:0035        2h
+    Segment: __VECTORS_036                       C:0036      C:0037        2h
+    Segment: CODE                                C:0048      C:01E2      19bh
+    Segment: NEAR_DATA                             R:20        R:23        4h
+    Segment: ROM_TEXT                            C:01E3      C:022B       49h
+    Segment: STARTUP                             C:0038      C:0047       10h
+
+EXTERNAL DEFINITIONS:
+=====================
+
+Symbol                               Address Module          Segment
+-------------------------------- ----------- --------------- --------------------------------
+__VECTOR_002                          C:0000 ledblink        __VECTORS_002                   
+__VECTOR_006                          C:0000 ledblink        __VECTORS_006                   
+__VECTOR_00A                          C:0000 ledblink        __VECTORS_00A                   
+__VECTOR_00C                          C:0000 ledblink        __VECTORS_00C                   
+__VECTOR_00E                          C:0000 ledblink        __VECTORS_00E                   
+__VECTOR_010                          C:0000 ledblink        __VECTORS_010                   
+__VECTOR_012                          C:0000 ledblink        __VECTORS_012                   
+__VECTOR_014                          C:0000 ledblink        __VECTORS_014                   
+__VECTOR_016                          C:0000 ledblink        __VECTORS_016                   
+__VECTOR_018                          C:0000 ledblink        __VECTORS_018                   
+__VECTOR_01A                          C:0000 ledblink        __VECTORS_01A                   
+__VECTOR_01C                          C:0000 ledblink        __VECTORS_01C                   
+__VECTOR_01E                          C:0000 ledblink        __VECTORS_01E                   
+__VECTOR_020                          C:0000 ledblink        __VECTORS_020                   
+__VECTOR_022                          C:0000 ledblink        __VECTORS_022                   
+__VECTOR_024                          C:0000 ledblink        __VECTORS_024                   
+__VECTOR_026                          C:0000 ledblink        __VECTORS_026                   
+__VECTOR_030                          C:0000 ledblink        __VECTORS_030                   
+__VECTOR_032                          C:0000 ledblink        __VECTORS_032                   
+__VECTOR_034                          C:0000 ledblink        __VECTORS_034                   
+__VECTOR_036                          C:0000 ledblink        __VECTORS_036                   
+__VECTOR_adc                          C:0000 ledblink        __VECTORS_016                   
+__VECTOR_c0                           C:0000 ledblink        __VECTORS_036                   
+__VECTOR_c1                           C:0000 ledblink        __VECTORS_034                   
+__VECTOR_c2                           C:0000 ledblink        __VECTORS_032                   
+__VECTOR_c3                           C:0000 ledblink        __VECTORS_030                   
+__VECTOR_i2c                          C:0000 ledblink        __VECTORS_012                   
+__VECTOR_p0ad                         C:0000 ledblink        __VECTORS_026                   
+__VECTOR_p1ad                         C:0000 ledblink        __VECTORS_024                   
+__VECTOR_p2ad                         C:0000 ledblink        __VECTORS_022                   
+__VECTOR_p3ad                         C:0000 ledblink        __VECTORS_020                   
+__VECTOR_p4ad                         C:0000 ledblink        __VECTORS_01E                   
+__VECTOR_p5ad                         C:0000 ledblink        __VECTORS_01C                   
+__VECTOR_p6ad                         C:0000 ledblink        __VECTORS_01A                   
+__VECTOR_p7ad                         C:0000 ledblink        __VECTORS_018                   
+__VECTOR_reset                        C:0000 ledblink        __VECTORS_002                   
+__VECTOR_spi                          C:0000 ledblink        __VECTORS_014                   
+__VECTOR_timer0                       C:0000 ledblink        __VECTORS_00C                   
+__VECTOR_timer1                       C:0000 ledblink        __VECTORS_00A                   
+__VECTOR_trap                         C:0000 ledblink        __VECTORS_006                   
+__VECTOR_uart0_rx                     C:0000 ledblink        __VECTORS_00E                   
+__VECTOR_uart0_tx                     C:0000 ledblink        __VECTORS_010                   
+ButtonPush                              R:22 ledblink        NEAR_DATA                       
+LedState                                R:23 ledblink        NEAR_DATA                       
+main                                  C:013E ledblink        CODE                            
+ProgDir                                 R:21 ledblink        NEAR_DATA                       
+ProgStat                                R:20 ledblink        NEAR_DATA                       
+putc                                  C:0111 ledblink        CODE                            
+puts                                  C:0121 ledblink        CODE                            
+SYSFREQ                            C:1194000 ledblink        CODE                            
+TIMER_PERIOD                          C:01A3 ledblink        CODE                            
+TIMER_PRES                            C:0007 ledblink        CODE                            
+TIMER_PRESCALE                        C:0080 ledblink        CODE                            
+TIMER_RR                              C:EBB0 ledblink        CODE                            
+UART_BAUD                             C:E100 ledblink        CODE                            
+UART_BRG                              C:0014 ledblink        CODE                            
+
+56 external symbol(s).
+
+SYMBOL CROSS REFERENCE:
+=======================
+Name                              Use         Module
+--------------------------------- ----------- -------------------------
+__VECTOR_002                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_006                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_00A                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_00C                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_00E                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_010                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_012                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_014                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_016                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_018                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_01A                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_01C                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_01E                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_020                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_022                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_024                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_026                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_030                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_032                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_034                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_036                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_adc                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_c0                       Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_c1                       Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_c2                       Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_c3                       Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_i2c                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p0ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p1ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p2ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p3ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p4ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p5ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p6ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_p7ad                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_reset                    Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_spi                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_timer0                   Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_timer1                   Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_trap                     Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_uart0_rx                 Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+__VECTOR_uart0_tx                 Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+ButtonPush                        Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+LedState                          Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+main                              Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+ProgDir                           Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+ProgStat                          Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+putc                              Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+puts                              Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+SYSFREQ                           Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+TIMER_PERIOD                      Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+TIMER_PRES                        Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+TIMER_PRESCALE                    Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+TIMER_RR                          Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+UART_BAUD                         Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+UART_BRG                          Defined     Z:\tmp\ez8-zilog-reference.qqvGju\ledblink.asm
+
+OUTPUT CHECKSUM
+===============
+ledblink_verified.hex E2A9
+
+
+
+END OF LINK MAP:
+================
+0 Errors
+0 Warnings

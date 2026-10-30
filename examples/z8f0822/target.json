@@ -1,0 +1,15 @@
+{
+  "device": "Z8F0822",
+  "oscillator": "external_crystal",
+  "crystal_frequency_hz": 18432000,
+  "system_clock_hz": 18432000,
+  "frequency_evidence": "User reports 18.432 marking on the installed crystal; nominal frequency, not instrument measured.",
+  "flash_option_0_observed_hex": "FF",
+  "osc_sel_observed": 3,
+  "internal_divider_in_crystal_mode": 1,
+  "ffreq_khz": 18432,
+  "ffreqh_hex": "48",
+  "ffreql_hex": "00",
+  "reference": "https://www.zilog.com/docs/z8encore/PS0225.pdf",
+  "programming_verified": false
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=78"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ez8-linux-native"
+version = "0.4.0"
+description = "Experimental Linux-native eZ8 assembler, linker and firmware toolchain"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Assemblers",
+]
+
+[project.scripts]
+ez8 = "ez8native.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ez8native*"]

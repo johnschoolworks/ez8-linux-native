@@ -1,0 +1,12 @@
+/* Z8F0822 Linker Reference */
+/* Derived from Zilog ZDS II linker command syntax */
+
+-FORMAT=INTEL
+
+RANGE ROM $0000 : $1FFF
+RANGE RDATA $0020 : $00DF
+RANGE EDATA $0100 : $03FF
+RANGE PRAM $0000 : $000F
+RANGE PAGE_E $0E00 : $0EFF
+
+"ledblink_verified.hex" = "ledblink.obj"

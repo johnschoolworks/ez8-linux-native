@@ -1,0 +1,7 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "Native: Tests", "type": "shell", "command": "make test", "group": "test"},
+    {"label": "Native: HEX smoke test", "type": "shell", "command": "make smoke", "group": "build"}
+  ]
+}

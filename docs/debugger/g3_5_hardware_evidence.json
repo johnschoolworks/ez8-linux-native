@@ -1,0 +1,68 @@
+{
+  "schema": "g3.5-hardware-evidence-v1",
+  "classification": "HARDWARE_OBSERVED",
+  "source": "user-supplied terminal transcript",
+  "baseline": "f282280",
+  "hardware": {
+    "adapter": "FTDI UC232R",
+    "vid": "0403",
+    "pid": "6001",
+    "serial": "REDACTED",
+    "smart_cable": "Zilog Encore! Serial Smart Cable",
+    "cable_label": "00C0042-001",
+    "release_label": "06.04.03",
+    "target": "Z8F0822"
+  },
+  "observations": [
+    {
+      "test": "G3.4-C",
+      "baud": 57600,
+      "format": "8N1",
+      "rtscts": false,
+      "requested_dtr": false,
+      "requested_rts": false,
+      "tx_hex": "80",
+      "write_return": 1,
+      "rx_hex": "",
+      "timeout_seconds": 1.5
+    },
+    {
+      "test": "G3.4-D",
+      "baud": 57600,
+      "rtscts": false,
+      "requested_dtr": false,
+      "requested_rts": false,
+      "cts": true,
+      "dsr": false,
+      "dcd": false,
+      "ri": false,
+      "tx_hex": "",
+      "rx_hex": ""
+    },
+    {
+      "test": "G3.4-E",
+      "baud": 57600,
+      "format": "8N1",
+      "rtscts": true,
+      "requested_dtr": false,
+      "rts_driver_managed": true,
+      "cts": true,
+      "dsr": false,
+      "tx_hex": "80",
+      "write_return": 1,
+      "rx_hex": "55 88 11 06 04 03",
+      "rx_length": 6,
+      "timeout_seconds": 1.5
+    }
+  ],
+  "interpretation": {
+    "candidate_signature_prefix": "55 88 11",
+    "candidate_release_suffix": "06 04 03",
+    "release_suffix_matches_label": true,
+    "firmware_version_confirmed": false,
+    "rtscts_required_confirmed": false,
+    "dtr_rts_electrically_verified": false,
+    "target_mcu_identified": false,
+    "flash_operations_performed": false
+  }
+}
