@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ez8-linux-native"
-version = "0.4.0"
+version = "0.4.0rc1"
 description = "Experimental Linux-native eZ8 assembler, linker and firmware toolchain"
 readme = "README.md"
 requires-python = ">=3.10"

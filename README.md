@@ -2,7 +2,29 @@
 
 Target: Zilog eZ8 / Z8F0822. This repository begins the *native* replacement path for the ZDS II tooling.
 
-## Current status (G4.0 / Package 0.4.0)
+## Current status (G4.0 / Package 0.4.0rc1)
+
+Release candidate: `v0.4.0-rc1`
+Python package version: `0.4.0rc1`
+Release Candidate approval: APPROVED
+Formal release: NOT AUTHORIZED
+
+### Validation baselines
+
+- Engineering baseline: 397 pytest tests passed,
+  24 subtests passed (historical engineering validation).
+- Public source snapshot: 325 tests passed,
+  24 subtests passed.
+- Installed-Wheel Golden Firmware reconstruction: PASS
+  for the previously qualified `0.4.0` artifact.
+- Wheel RECORD and Metadata integrity: PASS
+  for the previously qualified `0.4.0` artifact.
+- The `0.4.0rc1` Wheel requires new qualification.
+
+The unified CLI does not expose physical Flash programming,
+reset, run, or halt operations.
+
+### Current capabilities
 
 - Pure Python, no Wine required for the native prototype.
 - Two-pass assembler with a verified subset of eZ8 instructions, data directives,
