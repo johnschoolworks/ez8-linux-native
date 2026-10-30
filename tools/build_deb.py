@@ -19,8 +19,15 @@ def build(output=None):
         control.mkdir()
         (control / 'control').write_text((ROOT / 'packaging/debian/control').read_text().replace('@VERSION@', version))
         library = stage / 'usr/lib/ez8-linux-native'
-        shutil.copytree(ROOT / 'ez8native', library / 'ez8native',
-                        ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '*.pyo'))
+        source = ROOT / 'ez8native'
+        # Copy source modules only, not arbitrary files beside application code.
+        for module in source.rglob('*.py'):
+            relative = module.relative_to(source)
+            if module.is_symlink() or any(part.startswith('.') or part == '__pycache__' for part in relative.parts):
+                continue
+            destination_module = library / 'ez8native' / relative
+            destination_module.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(module, destination_module)
         binary = stage / 'usr/bin'
         binary.mkdir(parents=True)
         launcher = '''#!/usr/bin/python3

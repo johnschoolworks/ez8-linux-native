@@ -2,7 +2,16 @@
 __pycache__/
 *.py[cod]
 .pypytest_cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
 .venv/
+venv/
 
 # Build artifacts
 build/
@@ -24,10 +33,36 @@ tests/golden/expected/*.lst
 dist/
 
 # Extension dependencies and generated release artifacts
-vscode-extension/node_modules/
+node_modules
 vscode-extension/out/
 *.vsix
 *.deb
 /debian/
 # Link to vendor manuals rather than redistributing the PDFs
 docs/hardware/vendor/
+
+# Local credentials, private keys, and machine-specific configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+.aws/
+.ssh/
+.codex/
+.agents/
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+.npmrc
+.pypirc
+.vscode/settings.json
+.vscode/*.local.json
+
+# Local diagnostics and temporary files
+/g34_identify_probe.py
+*.tmp
+*.bak
+*.swp
+*.swo

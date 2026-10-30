@@ -103,6 +103,7 @@ dependency trees, and old binary packages are excluded.
 See [release notes](docs/RELEASE-0.4.0.md), [changelog](CHANGELOG.md), and
 [release readiness](docs/G4.0-RELEASE-READINESS.md). Builds do not publish assets;
 publication is a separate GitHub release step.
+See [upload exclusions](docs/UPLOAD-POLICY.md) for files that must remain local.
 
 ## License and support
 

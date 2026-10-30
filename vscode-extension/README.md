@@ -59,6 +59,6 @@ code --extensionDevelopmentPath="$PWD/vscode-extension" .
 ```
 
 Build all release packages with `bash tools/build-release.sh` from the repository
-root (or `bash vscode-extension/build-all.sh`). The packager excludes node_modules,
-source maps, tests, and previous VSIX files, and includes README and Apache-2.0
-LICENSE. Packaging uses Microsoft's [vsce tool](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).
+root (or `bash vscode-extension/build-all.sh`). The packager uses an explicit file allowlist: the compiled entrypoint, README,
+and Apache-2.0 LICENSE (plus VSIX metadata). Dependencies, tests, source maps,
+local settings, and previous builds are not included. Packaging uses Microsoft's [vsce tool](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).

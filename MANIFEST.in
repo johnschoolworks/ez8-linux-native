@@ -10,3 +10,11 @@ prune tools
 prune vscode-extension
 prune docs/hardware/vendor
 global-exclude __pycache__ *.py[cod] *.pdf *.obj *.lst
+prune .aws
+prune .ssh
+prune .codex
+prune .agents
+prune .venv
+prune .pytest_cache
+prune node_modules
+global-exclude .env .env.* .npmrc .pypirc *.pem *.key *.p12 *.pfx *.keystore *.log *.tmp *.bak

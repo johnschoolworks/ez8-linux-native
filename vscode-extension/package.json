@@ -62,5 +62,10 @@
   "homepage": "https://github.com/johntsaiainow/ez8-linux-native",
   "bugs": {
     "url": "https://github.com/johntsaiainow/ez8-linux-native/issues"
-  }
+  },
+  "files": [
+    "out/extension.js",
+    "README.md",
+    "LICENSE"
+  ]
 }
