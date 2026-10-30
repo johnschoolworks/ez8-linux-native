@@ -2,7 +2,7 @@ PYTHON ?= python3
 .PHONY: test smoke clean
 
 test:
-	PYTHONPATH=. $(PYTHON) -m unittest discover -s tests -v
+	PYTHONPATH=. $(PYTHON) -m pytest -q
 
 smoke:
 	PYTHONPATH=. $(PYTHON) -m ez8native.asm examples/data_smoke.asm -o build/data_smoke.hex

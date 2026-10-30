@@ -1,0 +1,12 @@
+include LICENSE README.md CHANGELOG.md
+recursive-include ez8native *.py
+recursive-include examples *.asm *.hex *.json *.md *.py
+recursive-include docs *.md
+prune tests
+prune backups
+prune build
+prune debian
+prune tools
+prune vscode-extension
+prune docs/hardware/vendor
+global-exclude __pycache__ *.py[cod] *.pdf *.obj *.lst

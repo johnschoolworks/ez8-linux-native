@@ -22,3 +22,12 @@ tests/golden/expected/*.lst
 # Python distribution artifacts
 *.egg-info/
 dist/
+
+# Extension dependencies and generated release artifacts
+vscode-extension/node_modules/
+vscode-extension/out/
+*.vsix
+*.deb
+/debian/
+# Link to vendor manuals rather than redistributing the PDFs
+docs/hardware/vendor/

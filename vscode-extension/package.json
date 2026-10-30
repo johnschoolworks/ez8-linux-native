@@ -1,0 +1,66 @@
+{
+  "name": "ez8-extension",
+  "displayName": "EZ8 Linux Toolchain",
+  "version": "0.4.0",
+  "publisher": "ai-now",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ez8.runTool",
+        "title": "EZ8: Run Native Tool"
+      },
+      {
+        "command": "ez8.assembleFile",
+        "title": "EZ8: Assemble Active File"
+      }
+    ],
+    "configuration": {
+      "title": "EZ8 Linux Toolchain",
+      "properties": {
+        "ez8.toolPath": {
+          "type": "string",
+          "default": "ez8",
+          "scope": "resource",
+          "description": "EZ8 executable name on PATH or absolute path (for example, a virtual environment bin/ez8)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node --test --test-isolation=none test/*.test.js",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "1.80.0",
+    "@vscode/vsce": "4.1.0",
+    "typescript": "^5.0.0"
+  },
+  "description": "Native Linux eZ8 assembler integration for Z8F0822",
+  "license": "Apache-2.0",
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johntsaiainow/ez8-linux-native.git"
+  },
+  "homepage": "https://github.com/johntsaiainow/ez8-linux-native",
+  "bugs": {
+    "url": "https://github.com/johntsaiainow/ez8-linux-native/issues"
+  }
+}

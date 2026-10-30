@@ -1,0 +1,10 @@
+Package: ez8-linux-native
+Version: @VERSION@
+Section: devel
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.10)
+Maintainer: John Tsai <john@ai-now.ai>
+Description: Linux-native eZ8 assembler, linker and firmware tools
+ Offline tools for the verified eZ8 instruction subset and Z8F0822 firmware.
+ Physical programming is not exposed by the unified command-line interface.
